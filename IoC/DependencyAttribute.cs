@@ -1,4 +1,4 @@
-namespace IoCManager;
+namespace IoC;
 
 /// <summary>
 /// Specifies that the field this is applied to is a dependency,

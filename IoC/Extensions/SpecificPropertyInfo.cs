@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
-namespace IoCManager.Extensions;
+namespace IoC.Extensions;
 
 internal sealed class SpecificPropertyInfo : AbstractFieldInfo
     {

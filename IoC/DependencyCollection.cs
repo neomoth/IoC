@@ -4,10 +4,10 @@ using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using System.Reflection.Emit;
 using System.Runtime.CompilerServices;
-using IoCManager.Extensions;
-using IoCManager.Exceptions;
+using IoC.Extensions;
+using IoC.Exceptions;
 
-namespace IoCManager;
+namespace IoC;
 
 public delegate T DependencyFactoryDelegate<out T>() where T : class;
 

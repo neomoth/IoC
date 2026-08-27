@@ -1,4 +1,4 @@
-namespace IoCManager;
+namespace IoC;
 /// <summary>
 /// If implemented on a type instantiated by IoC,
 /// <see cref="IPostInjectInit.PostInject" /> will be called after all dependencies have been injected.

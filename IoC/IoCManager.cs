@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using JetBrains.Annotations;
 
-namespace IoCManager;
+namespace IoC;
 
 /// <summary>
 /// The IoC handles Dependency Injection in the project.

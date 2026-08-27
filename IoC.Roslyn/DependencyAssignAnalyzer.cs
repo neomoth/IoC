@@ -3,7 +3,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Operations;
 
-namespace IoCManager.Roslyn;
+namespace IoC.Roslyn;
 
 [DiagnosticAnalyzer(LanguageNames.CSharp)]
 public sealed class DependencyAssignAnalyzer : DiagnosticAnalyzer

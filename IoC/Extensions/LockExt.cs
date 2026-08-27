@@ -1,6 +1,6 @@
 using JetBrains.Annotations;
 
-namespace IoCManager.Extensions;
+namespace IoC.Extensions;
 
 /// <summary>
 /// Convenience utility for working with various read/write locks.

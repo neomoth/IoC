@@ -1,6 +1,6 @@
 using JetBrains.Annotations;
 
-namespace IoCManager;
+namespace IoC;
 
 public static class DependencyCollectionExt
 {

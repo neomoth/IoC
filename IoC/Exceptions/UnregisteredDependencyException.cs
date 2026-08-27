@@ -1,4 +1,4 @@
-namespace IoCManager.Exceptions;
+namespace IoC.Exceptions;
 
 /// <summary>
 /// Like <see cref="UnregisteredTypeException"/>,
