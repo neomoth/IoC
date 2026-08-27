@@ -4,6 +4,7 @@
 		<TargetFramework>net10.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<RootNamespace>IoCManager</RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -11,7 +12,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\IoCManager.Roslyn\IoCManager.Roslyn.csproj" />
+	  <ProjectReference Include="..\IoC.Roslyn\IoC.Roslyn.csproj" />
 	</ItemGroup>
 
 </Project>

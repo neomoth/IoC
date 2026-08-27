@@ -4,7 +4,7 @@ using JetBrains.Annotations;
 namespace IoCManager;
 
 /// <summary>
-/// The IoCManager handles Dependency Injection in the project.
+/// The IoC handles Dependency Injection in the project.
 /// </summary>
 /// <remarks>
 /// <para>
@@ -18,7 +18,7 @@ namespace IoCManager;
 /// Secondly, it's very useful for unit tests as we can replace components to test things.
 /// </para>
 /// <para>
-/// To use the IoCManager, it first needs some types registered through <see cref="Register{TInterface, TImplementation}(bool)"/>.
+/// To use the IoC, it first needs some types registered through <see cref="Register{TInterface, TImplementation}(bool)"/>.
 /// These implementations can then be fetched with <see cref="Resolve{T}()"/>, or through field injection with <see cref="DependencyAttribute" />.
 /// </para>
 /// <para>

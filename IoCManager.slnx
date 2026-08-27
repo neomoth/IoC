@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="IoCManager.Roslyn/IoCManager.Roslyn.csproj" />
-  <Project Path="IoCManager/IoCManager.csproj" />
+  <Project Path="IoC.Roslyn\IoC.Roslyn.csproj" />
+  <Project Path="IoC\IoC.csproj" />
 </Solution>

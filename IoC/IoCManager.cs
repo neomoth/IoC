@@ -4,7 +4,7 @@ using JetBrains.Annotations;
 namespace IoCManager;
 
 /// <summary>
-/// The IoCManager handles Dependency Injection in the project.
+/// The IoC handles Dependency Injection in the project.
 /// </summary>
 /// <remarks>
 /// <para>
@@ -18,12 +18,12 @@ namespace IoCManager;
 /// Secondly, it's very useful for unit tests as we can replace components to test things.
 /// </para>
 /// <para>
-/// To use the IoCManager, it first needs some types registered through <see cref="Register{TInterface, TImplementation}(bool)"/>.
+/// To use the IoC, it first needs some types registered through <see cref="Register{TInterface, TImplementation}(bool)"/>.
 /// These implementations can then be fetched with <see cref="Resolve{T}()"/>, or through field injection with <see cref="DependencyAttribute" />.
 /// </para>
 /// <para>
-/// <c>IoCManager</c> is actually a static wrapper class around a thread local <see cref="IDependencyCollection"/>.
-/// As such, <c>IoCManager</c> will not work in other threads,
+/// <c>IoC</c> is actually a static wrapper class around a thread local <see cref="IDependencyCollection"/>.
+/// As such, <c>IoC</c> will not work in other threads,
 /// unless they have first been initialized with <see cref="InitThread()"/> or <see cref="InitThread(IDependencyCollection,bool)"/>.
 /// You should not initialize IoC in thread pools like that of <see cref="Task.Run(Action)"/>,
 /// since said thread pool might be used by different running instances
@@ -36,7 +36,7 @@ public static class IoCManager
 	private static readonly ThreadLocal<IDependencyCollection> Container = new();
 
 	/// <summary>
-	/// Returns the singleton thread-local instance of the IoCManager's dependency collection.
+	/// Returns the singleton thread-local instance of the IoC's dependency collection.
 	/// </summary>
 	/// <remarks>
 	/// This property will be null if <see cref="InitThread()"/> has not been called on this thread yet.
