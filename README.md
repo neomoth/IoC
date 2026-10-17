@@ -1,6 +1,7 @@
 # Neomoth.IoC
 
 A small static IoC container with `[Dependency]` field injection.
+Ripped straight from [RobustToolbox](https://github.com/space-wizards/RobustToolbox).
 
 ```
 dotnet add package Neomoth.IoC
