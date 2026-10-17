@@ -4,15 +4,40 @@
 		<TargetFramework>net10.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<RootNamespace>IoCManager</RootNamespace>
+		<RootNamespace>IoC</RootNamespace>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);CS1591</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<PackageId>Neomoth.IoC</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>neomoth</Authors>
+		<Description>A small static IoC container with [Dependency] field injection, plus Roslyn analyzers that catch common misuse.</Description>
+		<PackageTags>ioc;di;dependency-injection;container</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageProjectUrl>https://github.com/neomoth/IoCManager</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/neomoth/IoCManager</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="JetBrains.Annotations" Version="2026.2.0" />
+	  <PackageReference Include="JetBrains.Annotations" Version="2026.2.0" PrivateAssets="all" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\IoC.Roslyn\IoC.Roslyn.csproj" />
+	  <!-- Run the analyzers on this project, but don't reference or ship them as a library dependency. -->
+	  <ProjectReference Include="..\IoC.Roslyn\IoC.Roslyn.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\README.md" Pack="true" PackagePath="\" />
+	  <!-- Bundle the analyzer so consumers of the package get it automatically. -->
+	  <None Include="..\IoC.Roslyn\bin\$(Configuration)\netstandard2.0\IoC.Roslyn.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 	</ItemGroup>
 
 </Project>

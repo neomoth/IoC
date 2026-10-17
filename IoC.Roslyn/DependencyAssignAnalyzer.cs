@@ -8,7 +8,7 @@ namespace IoC.Roslyn;
 [DiagnosticAnalyzer(LanguageNames.CSharp)]
 public sealed class DependencyAssignAnalyzer : DiagnosticAnalyzer
 {
-	private const string DependencyAttributeType = "IoC.Roslyn.DependencyAttribute";
+	private const string DependencyAttributeType = "IoC.DependencyAttribute";
 
 	private static readonly DiagnosticDescriptor Rule = new(
 		"IOC0001",
